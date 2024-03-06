@@ -17,9 +17,13 @@
     *@
    <div>
       Especifique, por favor, os coeficientes da equação:<br />
-      A: <input type="text" /><br />
-      B: <input type="text" /><br />
-      C: <input type="text" /><br />
+      @*
+          o ID é um identificador que é lido APENAS no browser
+          o NAME é lido no Servidor
+      *@
+      A: <input type="text" id="A" name="A" /><br />
+      B: <input type="text" name="B" /><br />
+      C: <input type="text" name="C"/><br />
       <input type="submit" value="Calcular" />
    </div>
 </form>
