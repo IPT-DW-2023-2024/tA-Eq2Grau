@@ -1,8 +1,25 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+   ViewData["Title"] = "Bem Vindo";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+   <h1 class="display-4">Equação 2º Grau</h1>
+   <!-- <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>  -->
+   <h4>Resolução das raízes de uma equação do 2º grau.</h4>
 </div>
+
+
+
+<form>
+    @*
+        este comentário SÓ SERÁ visível no Visual Studio
+        neste formulário falta aplicar CSS às 'textboxs' e ao 'botão'
+    *@
+   <div>
+      Especifique, por favor, os coeficientes da equação:<br />
+      A: <input type="text" /><br />
+      B: <input type="text" /><br />
+      C: <input type="text" /><br />
+      <input type="submit" value="Calcular" />
+   </div>
+</form>
