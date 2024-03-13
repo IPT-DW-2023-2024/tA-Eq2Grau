@@ -1,4 +1,7 @@
 ﻿@{
+    // esta é uma linha de comentário em C#,
+    // porque nesta secção, é esta a linguagem que está
+    // a ser utilizada
    ViewData["Title"] = "Bem Vindo";
 }
 
@@ -27,3 +30,13 @@
       <input type="submit" value="Calcular" />
    </div>
 </form>
+
+@*
+    ler o conteúdo das ViewBags
+*@
+<div>
+   &nbsp; <br />
+   @ViewBag.Mensagem <br />
+   x1 = @ViewBag.X1 <br />
+   x2 = @ViewBag.X2
+</div>
