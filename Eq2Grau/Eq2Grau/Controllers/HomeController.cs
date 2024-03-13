@@ -35,8 +35,103 @@ namespace Eq2Grau.Controllers {
           *                   3.3- enviar resposta para o utilizador
           *     se não,
           *        enviar mensagem de erro para o utilizador
-          */ 
+          */
 
+         // vars. auxiliares
+         double auxA = 0, auxB = 0, auxC = 0;
+
+
+
+         // 1.
+         if (string.IsNullOrWhiteSpace(A) || string.IsNullOrWhiteSpace(B) || string.IsNullOrWhiteSpace(C)) {
+            // enviar mensagem para o utilizador
+
+
+
+            // devolver controlo à View
+            return View();
+         }
+
+         // 1.
+         if (!double.TryParse(A, out auxA)) {
+            // o A não é número.
+            // enviar mensagem para o utilizador
+
+
+
+            // devolver controlo à View
+            return View();
+         }
+
+         // 1.
+         if (!double.TryParse(B, out auxB)) {
+            // o B não é número.
+            // enviar mensagem para o utilizador
+
+
+
+            // devolver controlo à View
+            return View();
+         }
+
+         // 1.
+         if (!double.TryParse(C, out auxC)) {
+            // o C não é número.
+            // enviar mensagem para o utilizador
+
+
+            // devolver controlo à View
+            return View();
+         }
+
+
+         // 2.
+         if (auxA == 0) {
+            // o A é ZERO.
+            // enviar mensagem para o utilizador
+
+
+            // devolver controlo à View
+            return View();
+         }
+
+
+         // 3.
+         double delta = Math.Pow(auxB, 2) - 4 * auxA * auxC;
+         // 3.1
+         if (delta > 0) {
+            string x1 = Math.Round((-auxB + Math.Sqrt(delta)) / 2 / auxA, 2) + "";
+            string x2 = Math.Round((-auxB - Math.Sqrt(delta)) / 2 / auxA, 2) + "";
+            // enviar mensagem para o utilizador
+
+
+
+            // devolver controlo à View
+            return View();
+         }
+
+         if (delta == 0) {
+            string x = Math.Round(-auxB / 2 / auxA, 2) + "";
+
+            // enviar mensagem para o utilizador
+
+
+            // devolver controlo à View
+            return View();
+         }
+
+         if (delta < 0) {
+            string x1 = Math.Round((-auxB) / 2 / auxA, 2) + " + " + Math.Round(Math.Sqrt(-delta) / 2 / auxA, 2) + " i";
+            string x2 = Math.Round((-auxB) / 2 / auxA, 2) + " - " + Math.Round(Math.Sqrt(-delta) / 2 / auxA, 2) + " i";
+            // enviar mensagem para o utilizador
+
+
+            // devolver controlo à View
+            return View();
+         }
+
+         // se chegar aqui, alguma coisa correu muito mal...
+         // devolver controlo à View
          return View();
       }
 
